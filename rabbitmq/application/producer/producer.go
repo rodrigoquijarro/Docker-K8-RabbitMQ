@@ -48,7 +48,7 @@ func submit(writer http.ResponseWriter, request *http.Request, p httprouter.Para
 	defer ch.Close()
 
 	q, err := ch.QueueDeclare(
-		"publisher", // name
+		"producer", // name
 		true,   // durable
 		false,   // delete when unused
 		false,   // exclusive
